@@ -1,7 +1,7 @@
 ---
 ip: "192.168.10.10"
 memory: 6048
-cpus: 2
+cpus: 4
 
 authorize: ~/.ssh/id_rsa.pub
 
@@ -11,7 +11,29 @@ keys:
 folders:
   - map: ~/Code/work
     to: /home/vagrant/code
-
+    type: "nfs"
 ports:
-    - send: 4400
-      to: 4400
+  - send: 9000
+    to: 9000
+  - send: 9100
+    to: 9100
+  - send: 9900
+    to: 9900
+  - send: 9800
+    to: 9800
+  - send: 5432
+    to: 5432
+  - send: 5433
+    to: 5433
+  - send: 1883
+    to: 1883
+  - send: 4400
+    to: 4400
+  - send: 4444
+    to: 4444
+  - send: 443
+    to: 443
+  - send: 5443
+    to: 5443
+  - send: 9090
+    to: 9090

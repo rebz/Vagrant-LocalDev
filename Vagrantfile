@@ -17,8 +17,4 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
      config.vm.provision "shell", path: "scripts/system-setup.sh", privileged: true, keep_color: true
      config.vm.provision "shell", path: "scripts/user-setup.sh", privileged: false, keep_color: true
-
-    if Vagrant.has_plugin?('vagrant-notify-forwarder')
-        config.notify_forwarder.enable = true
-    end
 end
