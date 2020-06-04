@@ -28,6 +28,15 @@ curl -L https://github.com/docker/compose/releases/download/1.25.5/docker-compos
 chmod +x /usr/local/bin/docker-compose
 usermod -aG docker vagrant
 
+# Cockpit Install
+apt-get install cockpit -y
+
+touch /etc/cockpit/cockpit.conf
+echo '
+[WebService]
+AllowUnencrypted = true
+' >> /etc/cockpit/cockpit.conf
+
 # Delete the massive firmware packages
 rm -rf /lib/firmware/*
 rm -rf /usr/share/doc/linux-firmware/*
@@ -51,3 +60,4 @@ truncate -s 0 /etc/machine-id
 /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=1024
 /sbin/mkswap /var/swap.1
 /sbin/swapon /var/swap.1
+
