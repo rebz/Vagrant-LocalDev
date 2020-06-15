@@ -9,8 +9,8 @@ keys:
   - ~/.ssh/id_rsa
 
 folders:
-  - map: ~/Code/work
-    to: /home/vagrant/code
+  - map: ~/Code/work/agent
+    to: /home/vagrant/code/agent
     type: "nfs"
 ports:
   - send: 9000
