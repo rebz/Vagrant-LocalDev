@@ -28,9 +28,6 @@ curl -L https://github.com/docker/compose/releases/download/1.25.5/docker-compos
 chmod +x /usr/local/bin/docker-compose
 usermod -aG docker vagrant
 
-## YAD install
-apt-get install yad -y
-
 # Cockpit Install
 apt-get install cockpit -y
 
